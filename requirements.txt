@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 streamlit
 pandas
 psycopg2-binary
 plotly
 streamlit-authenticator
+=======
+streamlit
+pandas
+psycopg2-binary
+plotly
+streamlit-authenticator
+>>>>>>> 10fa684bbeaafe04b16baa233c15df0aa5a25e0d
 streamlit-autorefresh
