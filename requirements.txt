@@ -2,3 +2,5 @@ streamlit
 pandas
 psycopg2-binary
 plotly
+streamlit-authenticator
+streamlit-autorefresh
