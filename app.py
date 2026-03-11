@@ -3,6 +3,28 @@ import pandas as pd
 import psycopg2
 import plotly.express as px
 
+# cache de 7 dias
+@st.cache_data(ttl=604800)
+def carregar_dados():
+    
+    conn = psycopg2.connect(
+        host="localhost",
+        database="datalab",
+        user="postgres",
+        password="8604"
+    )
+
+    query = "SELECT * FROM financeiro"
+
+    df = pd.read_sql(query, conn)
+
+    conn.close()
+
+    return df
+
+
+df = carregar_dados()
+
 # ------------------------------------------------
 # CONFIGURAÇÃO DA PÁGINA
 # ------------------------------------------------
